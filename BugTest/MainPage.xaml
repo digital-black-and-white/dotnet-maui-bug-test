@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfi="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             x:Class="BugTest.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="SfNumericEntry Bug Test"
+                Style="{StaticResource Headline}"/>
+
+            <Label
+                Text="Entering a single period (.) into the numeric entry below crashes the app."
+                Style="{StaticResource SubHeadline}"/>
+
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
