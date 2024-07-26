@@ -21,6 +21,9 @@
                 x:Name="lstBugTest"
                 SelectionMode="Single"
                 SelectionBackground="DarkBlue"
+                ScrollBarVisibility="Always"
+                CanMaintainScrollPosition="True"
+                ItemSize="40"
                 SelectionChanged="lstBugTest_SelectionChanged"
                 SelectionChanging="lstBugTest_SelectionChanging">
                 <sflv:SfListView.ItemTemplate>
