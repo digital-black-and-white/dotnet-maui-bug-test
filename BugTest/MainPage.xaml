@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sfi="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
+             xmlns:sflv="clr-namespace:Syncfusion.Maui.ListView;assembly=Syncfusion.Maui.ListView"
              x:Class="BugTest.MainPage">
 
     <ScrollView>
@@ -10,19 +10,34 @@
             Spacing="25">
 
             <Label
-                Text="SfNumericEntry Bug Test"
+                Text="SfListView Event Bug Test"
                 Style="{StaticResource Headline}"/>
 
             <Label
-                Text="Entering a single period (.) into the numeric entry below crashes the app."
+                Text="Try selecting an item below to see if events are fired."
                 Style="{StaticResource SubHeadline}"/>
 
-            <sfi:SfNumericEntry
-                Minimum="0.0"
-                Maximum="100.0"
-                CustomFormat="0.0"
-                AllowNull="True"
-                ValueChangeMode="OnKeyFocus"/>
+            <sflv:SfListView
+                x:Name="lstBugTest"
+                SelectionMode="Single"
+                SelectionBackground="DarkBlue"
+                SelectionChanged="lstBugTest_SelectionChanged"
+                SelectionChanging="lstBugTest_SelectionChanging">
+                <sflv:SfListView.ItemTemplate>
+                    <DataTemplate>
+                        <HorizontalStackLayout>
+                            <Label
+                                VerticalTextAlignment="Center"
+                                Padding="10"
+                                Text="{Binding Name}"/>
+                        </HorizontalStackLayout>
+                    </DataTemplate>
+                </sflv:SfListView.ItemTemplate>
+            </sflv:SfListView>
+            <Editor
+                x:Name="txtBugTest"
+                HeightRequest="200"
+                IsReadOnly="True"/>
         </VerticalStackLayout>
     </ScrollView>
 
