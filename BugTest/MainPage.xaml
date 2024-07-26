@@ -17,26 +17,42 @@
                 Text="Try selecting an item below to see if events are fired."
                 Style="{StaticResource SubHeadline}"/>
 
-            <sflv:SfListView
-                x:Name="lstBugTest"
-                SelectionMode="Single"
-                SelectionBackground="DarkBlue"
-                ScrollBarVisibility="Always"
-                CanMaintainScrollPosition="True"
-                ItemSize="40"
-                SelectionChanged="lstBugTest_SelectionChanged"
-                SelectionChanging="lstBugTest_SelectionChanging">
-                <sflv:SfListView.ItemTemplate>
-                    <DataTemplate>
-                        <HorizontalStackLayout>
+            <Border
+                StrokeThickness="2"
+                BackgroundColor="Gray">
+                <sflv:SfListView
+                    x:Name="lstBugTest"
+                    SelectionMode="Single"
+                    SelectionBackground="DarkBlue"
+                    ScrollBarVisibility="Always"
+                    CanMaintainScrollPosition="True"
+                    ItemSize="40"
+                    BackgroundColor="Black"
+                    SelectionChanged="lstBugTest_SelectionChanged"
+                    SelectionChanging="lstBugTest_SelectionChanging">
+                    <sflv:SfListView.EmptyView>
+                        <StackLayout
+                            VerticalOptions="Center">
                             <Label
+                                Opacity="0.75"
+                                HorizontalTextAlignment="Center"
                                 VerticalTextAlignment="Center"
                                 Padding="10"
-                                Text="{Binding Name}"/>
-                        </HorizontalStackLayout>
-                    </DataTemplate>
-                </sflv:SfListView.ItemTemplate>
-            </sflv:SfListView>
+                                Text="No items."/>
+                        </StackLayout>
+                    </sflv:SfListView.EmptyView>
+                    <sflv:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <HorizontalStackLayout>
+                                <Label
+                                    VerticalTextAlignment="Center"
+                                    Padding="10"
+                                    Text="{Binding Name}"/>
+                            </HorizontalStackLayout>
+                        </DataTemplate>
+                    </sflv:SfListView.ItemTemplate>
+                </sflv:SfListView>
+            </Border>
             <Editor
                 x:Name="txtBugTest"
                 HeightRequest="200"
