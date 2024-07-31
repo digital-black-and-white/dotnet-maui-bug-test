@@ -14,9 +14,69 @@
                 Style="{StaticResource Headline}"/>
 
             <Label
-                Text="Entering a single period (.) into the numeric entry below crashes the app."
+                Text="Put focus on first entry below. Then hold down the TAB key and it will eventually crash the app."
                 Style="{StaticResource SubHeadline}"/>
 
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
+            <sfi:SfNumericEntry
+                Minimum="0.0"
+                Maximum="100.0"
+                CustomFormat="0.0"
+                AllowNull="True"
+                ValueChangeMode="OnKeyFocus"/>
             <sfi:SfNumericEntry
                 Minimum="0.0"
                 Maximum="100.0"
