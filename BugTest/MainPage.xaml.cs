@@ -33,14 +33,7 @@ public partial class MainPage : ContentPage
 
 	private void txtLog_TextChanged(object? sender, EventArgs e)
 	{
-		// Task.Delay(500).ContinueWith((task) =>
-		// {
-		// 	MainThread.InvokeOnMainThreadAsync(() =>
-		// 	{
-		// 		this.txtLog.CursorPosition = this.txtLog.Text.Length;
-
-		// 	});
-		// });
+		this.txtLog.CursorPosition = this.txtLog.Text.Length;
 	}
 
 	private void btnTest_Clicked(object? sender, EventArgs e)

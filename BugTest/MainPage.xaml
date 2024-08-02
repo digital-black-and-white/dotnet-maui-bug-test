@@ -4,48 +4,46 @@
              xmlns:sfi="clr-namespace:Syncfusion.Maui.Inputs;assembly=Syncfusion.Maui.Inputs"
              x:Class="BugTest.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+    <VerticalStackLayout
+        Padding="30,0"
+        Spacing="25">
 
-            <Label
-                Text="SfComboBox DropDown Close Bug Test"
-                Style="{StaticResource Headline}"/>
+        <Label
+            Text="SfComboBox DropDown Close Bug Test"
+            Style="{StaticResource Headline}"/>
 
-            <Label
-                Text="Click a combo box below to open the dropdown.&#10;Then click on the button, the form, or the other dropdown to see that the dropdown does not close."
-                Style="{StaticResource SubHeadline}"/>
+        <Label
+            Text="Click a combo box below to open the dropdown.&#10;Then click on the button, the form, or the other dropdown to see that the dropdown does not close."
+            Style="{StaticResource SubHeadline}"/>
 
-            <Editor
-                x:Name="txtLog"
-                HeightRequest="300"
-                TextChanged="txtLog_TextChanged"/>
+        <Editor
+            x:Name="txtLog"
+            HeightRequest="300"
+            TextChanged="txtLog_TextChanged"/>
 
-            <Button
-                x:Name="btnTest"
-                Text="Test"
-                Clicked="btnTest_Clicked"
-                Focused="btnTest_Focused"
-                Unfocused="btnTest_Unfocused"/>
+        <Button
+            x:Name="btnTest"
+            Text="Test"
+            Clicked="btnTest_Clicked"
+            Focused="btnTest_Focused"
+            Unfocused="btnTest_Unfocused"/>
 
-            <sfi:SfComboBox
-                x:Name="cboList1"
-                Focused="cboList1_Focused"
-                Unfocused="cboList1_Unfocused"
-                DropDownClosed="cboList1_DropDownClosed"
-                DropDownClosing="cboList1_DropDownClosing"
-                WidthRequest="300"/>
+        <sfi:SfComboBox
+            x:Name="cboList1"
+            Focused="cboList1_Focused"
+            Unfocused="cboList1_Unfocused"
+            DropDownClosed="cboList1_DropDownClosed"
+            DropDownClosing="cboList1_DropDownClosing"
+            WidthRequest="300"/>
 
-            <sfi:SfComboBox
-                x:Name="cboList2"
-                Focused="cboList2_Focused"
-                Unfocused="cboList2_Unfocused"
-                DropDownClosed="cboList2_DropDownClosed"
-                DropDownClosing="cboList2_DropDownClosing"
-                WidthRequest="500"/>
+        <sfi:SfComboBox
+            x:Name="cboList2"
+            Focused="cboList2_Focused"
+            Unfocused="cboList2_Unfocused"
+            DropDownClosed="cboList2_DropDownClosed"
+            DropDownClosing="cboList2_DropDownClosing"
+            WidthRequest="500"/>
 
-        </VerticalStackLayout>
-    </ScrollView>
+    </VerticalStackLayout>
 
 </ContentPage>
