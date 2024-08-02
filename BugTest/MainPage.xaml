@@ -10,28 +10,40 @@
             Spacing="25">
 
             <Label
-                Text="Tab Into Bug Test"
+                Text="SfComboBox DropDown Close Bug Test"
                 Style="{StaticResource Headline}"/>
 
             <Label
-                Text="Try to use TAB key to change focus between Entry and SfNumericEntry fields."
+                Text="Click a combo box below to open the dropdown.&#10;Then click on the button, the form, or the other dropdown to see that the dropdown does not close."
                 Style="{StaticResource SubHeadline}"/>
 
-            <Entry/>
-            <sfi:SfNumericEntry
-                Minimum="0.0"
-                Maximum="100.0"
-                CustomFormat="0.0"
-                AllowNull="True"
-                ValueChangeMode="OnKeyFocus"/>
-            <Entry/>
-            <sfi:SfNumericEntry
-                Minimum="0.0"
-                Maximum="100.0"
-                CustomFormat="0.0"
-                AllowNull="True"
-                ValueChangeMode="OnKeyFocus"/>
-            <Entry/>
+            <Editor
+                x:Name="txtLog"
+                HeightRequest="300"
+                TextChanged="txtLog_TextChanged"/>
+
+            <Button
+                x:Name="btnTest"
+                Text="Test"
+                Clicked="btnTest_Clicked"
+                Focused="btnTest_Focused"
+                Unfocused="btnTest_Unfocused"/>
+
+            <sfi:SfComboBox
+                x:Name="cboList1"
+                Focused="cboList1_Focused"
+                Unfocused="cboList1_Unfocused"
+                DropDownClosed="cboList1_DropDownClosed"
+                DropDownClosing="cboList1_DropDownClosing"
+                WidthRequest="300"/>
+
+            <sfi:SfComboBox
+                x:Name="cboList2"
+                Focused="cboList2_Focused"
+                Unfocused="cboList2_Unfocused"
+                DropDownClosed="cboList2_DropDownClosed"
+                DropDownClosing="cboList2_DropDownClosing"
+                WidthRequest="500"/>
 
         </VerticalStackLayout>
     </ScrollView>
