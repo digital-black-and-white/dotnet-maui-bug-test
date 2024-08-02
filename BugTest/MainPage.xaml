@@ -9,16 +9,21 @@
         Spacing="25">
 
         <Label
-            Text="SfComboBox DropDown Close Bug Test"
+            Text="SfNumericEntry Value Bug Test"
             Style="{StaticResource Headline}"/>
 
         <Label
-            Text="Click a combo box below to open the dropdown.&#10;Then click on the button, the form, or the other dropdown to see that the dropdown does not close."
+            Text="
+                Enter a value into the numeric entry below (without hitting Enter to commit the value).&#10;
+                Then click on the button to see that the numeric entry does not lose focus and the value property does not change."
             Style="{StaticResource SubHeadline}"/>
+
+        <Label Text="Event Log:"/>
 
         <Editor
             x:Name="txtLog"
             HeightRequest="300"
+            IsReadOnly="True"
             TextChanged="txtLog_TextChanged"/>
 
         <Button
@@ -28,21 +33,22 @@
             Focused="btnTest_Focused"
             Unfocused="btnTest_Unfocused"/>
 
-        <sfi:SfComboBox
-            x:Name="cboList1"
-            Focused="cboList1_Focused"
-            Unfocused="cboList1_Unfocused"
-            DropDownClosed="cboList1_DropDownClosed"
-            DropDownClosing="cboList1_DropDownClosing"
-            WidthRequest="300"/>
+        <sfi:SfNumericEntry
+            x:Name="numTest1"
+            WidthRequest="300"
+            CustomFormat="0.00"
+            AllowNull="True"
+            Focused="numTest1_Focused"
+            Unfocused="numTest1_Unfocused"/>
 
-        <sfi:SfComboBox
-            x:Name="cboList2"
-            Focused="cboList2_Focused"
-            Unfocused="cboList2_Unfocused"
-            DropDownClosed="cboList2_DropDownClosed"
-            DropDownClosing="cboList2_DropDownClosing"
-            WidthRequest="500"/>
+        <sfi:SfNumericEntry
+            x:Name="numTest2"
+            WidthRequest="300"
+            CustomFormat="0.00"
+            AllowNull="True"
+            Focused="numTest2_Focused"
+            Unfocused="numTest2_Unfocused"
+            ValueChangeMode="OnKeyFocus"/>
 
     </VerticalStackLayout>
 
