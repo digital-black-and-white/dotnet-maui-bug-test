@@ -1,4 +1,6 @@
 ﻿
+using Syncfusion.Maui.Inputs;
+
 namespace BugTest;
 
 public partial class MainPage : ContentPage
@@ -40,6 +42,11 @@ public partial class MainPage : ContentPage
 		this.txtLog.Text += "numTest1_Unfocused()" + Environment.NewLine;
 	}
 
+	private void numTest1_ValueChanged(object? sender, NumericEntryValueChangedEventArgs e)
+	{
+		this.txtLog.Text += "numTest1_ValueChanged() - Value: " + e.NewValue + Environment.NewLine;
+	}
+
 	private void numTest2_Focused(object? sender, FocusEventArgs e)
 	{
 		this.txtLog.Text += "numTest2_Focused()" + Environment.NewLine;
@@ -48,5 +55,10 @@ public partial class MainPage : ContentPage
 	private void numTest2_Unfocused(object? sender, EventArgs e)
 	{
 		this.txtLog.Text += "numTest2_Unfocused()" + Environment.NewLine;
+	}
+
+	private void numTest2_ValueChanged(object? sender, NumericEntryValueChangedEventArgs e)
+	{
+		this.txtLog.Text += "numTest2_ValueChanged() - Value: " + e.NewValue + Environment.NewLine;
 	}
 }

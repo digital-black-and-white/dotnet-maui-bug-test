@@ -22,7 +22,7 @@
 
         <Editor
             x:Name="txtLog"
-            HeightRequest="300"
+            HeightRequest="200"
             IsReadOnly="True"
             TextChanged="txtLog_TextChanged"/>
 
@@ -33,19 +33,27 @@
             Focused="btnTest_Focused"
             Unfocused="btnTest_Unfocused"/>
 
+        <Label
+            Text="SfNumericEntry w/ ValueChangeMode = OnLostFocus:"
+            HorizontalTextAlignment="Center"/>
         <sfi:SfNumericEntry
             x:Name="numTest1"
             WidthRequest="300"
             CustomFormat="0.00"
             AllowNull="True"
+            ValueChanged="numTest1_ValueChanged"
             Focused="numTest1_Focused"
-            Unfocused="numTest1_Unfocused"/>
-
+            Unfocused="numTest1_Unfocused"
+            ValueChangeMode="OnLostFocus"/>
+        <Label
+            Text="SfNumericEntry w/ ValueChangeMode = OnKeyFocus:"
+            HorizontalTextAlignment="Center"/>
         <sfi:SfNumericEntry
             x:Name="numTest2"
             WidthRequest="300"
             CustomFormat="0.00"
             AllowNull="True"
+            ValueChanged="numTest2_ValueChanged"
             Focused="numTest2_Focused"
             Unfocused="numTest2_Unfocused"
             ValueChangeMode="OnKeyFocus"/>
